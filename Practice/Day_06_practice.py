@@ -20,7 +20,7 @@ def clean_record(record):
     }
 
 def is_valid(record):
-    return record["amount"] > 0 and (record["status"] == "VALID" or record["status"] == "COMPLETED")
+    return record["amount"] > 0 and record["status"] in ("VALID", "COMPLETED")
 
 def csv_reader(filePath):
     valid_records = []
